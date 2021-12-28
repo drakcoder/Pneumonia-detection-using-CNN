@@ -1,3 +1,3 @@
 # Pneumonia-detection-using-CNN
 
-### Model : <a href="https://drive.google.com/file/d/1ReSwePKXD7CtQZEgwEPcXvu0q2fux9e8/view?usp=sharing">Link</a>
+### Models : <a href="https://drive.google.com/drive/folders/1EZNJzFVRVCh_8nJUYSJAk8YdIaV2llED?usp=sharing">Link</a>
