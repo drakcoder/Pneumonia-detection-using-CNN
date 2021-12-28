@@ -1,0 +1,74 @@
+{% extends "base.html" %} {% block content %}
+    
+<div class="container" id="patient-details">
+    <div class="display-4 text-center mb-3">
+        Patient Details
+    </div>
+    <form class="row needs-validation mx-auto" action="/data" method="post">
+        <div class="col-md-6 my-2">
+            <label for="First Name" class="form-label">First name</label>
+            <input type="text" class="form-control" id="firstName" name="First Name" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="col-md-6 my-2">
+            <label for="Last Name" class="form-label">Last name</label>
+            <input type="text" class="form-control" id="lastName" name="Last Name" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="col-md-4 mb-2">
+            <label for="Age" class="form-label">Age</label>
+            <input type="number" class="form-control" id="age" name="Age" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-2">
+            <label for="Gender" class="form-label">Gender</label>
+            <select class="form-select" aria-label="Default select example" name="Gender">
+                <option selected>select gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Others">Others</option>
+            </select>
+        </div>
+
+        <div class="col-md-4 mb-2">
+            <label for="Blood-type" class="form-label">Blood Type</label>
+            <select class="form-select" aria-label="Default select example" name="Blood-type">
+                <option selected>select blood type</option>
+                <option value="O negative">O negative</option>
+                <option value="O positive">O positive</option>
+                <option value="A negative">A negative</option>
+                <option value="A positive">A positive</option>
+                <option value="B negative">B negative</option>
+                <option value="B positive">B positive</option>
+                <option value="AB negative">AB negative</option>
+                <option value="AB positive">AB positive</option>
+            </select>
+        </div>
+        
+        <div class="col-md-4 mb-3 mt-3 display-6">Contact Details</div>
+        <div class="col-md-4 mb-3"></div>
+        <div class="col-md-4 mb-3"></div>
+
+        <div class="col-md-5 mb-2">
+            <label for="Email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" name="Email" placeholder="name@example.com">
+        </div>
+        <div class="col-md-7 mb-2"></div>
+        <div class="col-md-5 mb-2">
+            <label for="Mobile" class="form-label">Phone/ Mobile Number</label>
+            <input type="number" class="form-control" id="mobile" name="Mobile" placeholder="Ex-9490xxxxxx">
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-success">Submit details</button>
+        </div>
+    </form>
+</div>
+
+{% endblock content %}

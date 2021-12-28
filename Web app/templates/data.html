@@ -1,0 +1,62 @@
+{% extends "base.html" %} {% block content %}
+<div class="row">
+    <div class="text-center display-4 mb-2" id="test-text">Pneumonia Detection Test Result</div>
+    <div class="col-xl-4 col-md-12 col-sm-12">
+        <div class="upload-screen pb-3">
+
+            <!-- For demo purpose -->
+            <header class="pb-1">
+                <h1 class="display-5"> <span id="upload-text">Upload</span> X-Ray Image</h1>
+            </header>
+            <form id="upload-file" method="post" enctype="multipart/form-data">
+                <label for="imageUpload" class="upload-label mt-2" id="chooseUpload">
+                    Choose...
+                </label>
+                <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+            </form>
+        
+            <div class="image-section" style="display:none;">
+                <div class="img-preview">
+                    <div id="imagePreview">
+                    </div>
+                </div>
+                <div>
+                    <!-- <button type="button" class="btn btn-outline-light px-4" id="btn-predict">Predict</button> -->
+                    <button type="button" class="btn btn-outline-dark px-4" id="btn-predict">Predict</button>
+                </div>
+            </div>
+        
+            <div class="loader" style="display:none;"></div>
+        </div>
+    </div>
+    <div class="col-xl-2"></div>
+    <div class="col-xl-6 col-md-12 col-sm-12">
+        <div class="display-5">Patient Details</div>
+        <br>
+        {% for key,value in form_data.items() %}
+            <div class="row">
+                <p class="col-5 fw-bolder"> {{key}}</p>
+                <p class="col-2">:</p>
+                <p class="col-5"> {{value}}</p>
+                <br>
+            </div>
+        {% endfor %}
+        <div class="row">
+            <p class="col-5 fw-bolder"> Result</p>
+            <p class="col-2">:</p>
+            <p class="col-5" id="result"></p>
+        </div>
+    </div>
+</div>
+<div id="showPrint" style="display:none;">
+    <div class="mt-1">
+        <span class="fw-bolder">Note: </span>
+        The accuracy of prediction is 98%
+    </div>
+    <div class="text-center">
+        <!-- <div class="btn btn-outline-light" id="btn-print"><i class="fas fa-print"></i> Take Print</div> -->
+        <div class="btn btn-outline-dark" id="btn-print"><i class="fas fa-print"></i> Take Print</div>
+    </div>
+</div>
+
+{% endblock content %}
